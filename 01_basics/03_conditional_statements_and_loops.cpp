@@ -308,18 +308,55 @@ int main() {
 
     //? print 10 stars in 5 lines
 
-     int n = 5;  // No. of lines
-     for(int i=1; i<=n; i++){   // No. of Lines
-        int m = 10;    // No. of stars
-        for (int j = 1; j <= m; j++)
-        {
-            cout<<"*";    
-        }
-        cout<<endl;
+    //  int n = 5;  // No. of lines
+    //  for(int i=1; i<=n; i++){   // No. of Lines
+    //     int m = 10;    // No. of stars
+    //     for (int j = 1; j <= m; j++)
+    //     {
+    //         cout<<"*";    
+    //     }
+    //     cout<<endl;
         
-     }
+    //  }
 
 
+
+    //! Homework Problems:
+
+    //! Q1. Sum of all numbers from 1 to N which are divisible by 3
+
+    // int n;
+    // int sum = 0;
+
+    // cout<<"Enter N: ";
+    // cin>>n;
+
+    // for (int i = 0; i <= n; i++)
+    // {
+    //     if (i%3==0)
+    //     {
+    //         sum+=i;
+    //     }
+    // }
+    // cout<<"Sum = "<<sum;
+
+
+
+    //! Q2. print Factorial of a number.
+
+    int n;
+    int factorial = 1;
+
+    cout<<"Enter N: ";
+    cin>>n;
+
+    for (int i = 1; i <= n; i++)
+    {
+        factorial*=i;
+    }
+    cout<<"Factorial = "<<factorial;
+    
+    return 0;
 
 
 }
