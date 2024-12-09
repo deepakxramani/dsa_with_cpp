@@ -68,18 +68,105 @@ using namespace std;
 
     //! Ques3:  Calculate sum of digits of a number
 
-     int sumOfDigits(int num) {
-        int digitSum = 0;
+    //  int sumOfDigits(int num) {
+    //     int digitSum = 0;
 
-        while (num > 0)
-        {
-            int lastDig = num % 10;
-            num /= 10;
+    //     while (num > 0)
+    //     {
+    //         int lastDig = num % 10;
+    //         num /= 10;
 
-            digitSum += lastDig;
-        }
-        return digitSum;
+    //         digitSum += lastDig;
+    //     }
+    //     return digitSum;
+    // }
+
+
+     //! Ques4: C++ program to calculate nCr (binomial coefficient):
+
+  // Function to calculate factorial
+  //   long long factorial(int n) {
+  //     long long result = 1;
+  //     for (int i = 1; i <= n; i++) {
+  //         result *= i;
+  //     }
+  //     return result;
+  // }
+
+  // // Function to calculate nCr
+  //   long long nCr(int n, int r) {
+  //       if (r > n || n < 0 || r < 0)
+  //           return 0; // Invalid case
+  //       return factorial(n) / (factorial(r) * factorial(n - r));
+  // }
+
+
+    //! Ques5: Write a function to check if a number is prime or not
+//     bool isPrime(int num) {
+//     if (num <= 1)
+//         return false; // 0 and 1 are not prime numbers
+//     if (num <= 3)
+//         return true;  // 2 and 3 are prime numbers
+//     if (num % 2 == 0 || num % 3 == 0)
+//         return false; // Exclude multiples of 2 and 3
+
+//     // Check for factors from 5 to √num
+//     for (int i = 5; i * i <= num; i += 6) {
+//         if (num % i == 0 || num % (i + 2) == 0)
+//             return false;
+//     }
+//     return true;
+// }
+
+
+
+  //! Ques6: Write a function to print all prime numbers from 2 to N.
+//   bool isPrime(int num) {
+//     if (num <= 1)
+//         return false; // 0 and 1 are not prime numbers
+//     if (num <= 3)
+//         return true;  // 2 and 3 are prime numbers
+//     if (num % 2 == 0 || num % 3 == 0)
+//         return false; // Exclude multiples of 2 and 3
+
+//     // Check for factors from 5 to √num
+//     for (int i = 5; i * i <= num; i += 6) {
+//         if (num % i == 0 || num % (i + 2) == 0)
+//             return false;
+//     }
+//     return true;
+// }
+
+// // Function to print all prime numbers from 2 to N
+// void printPrimes(int N) {
+//     for (int i = 2; i <= N; i++) {
+//         if (isPrime(i)) {
+//             cout << i << " ";
+//         }
+//     }
+//     cout << endl;
+// }
+
+
+  //! Ques7: Write a function to print nth Fibonacci Series.
+
+  // Function to print the nth Fibonacci number
+long long fibonacci(int n) {
+    if (n <= 1)
+        return n;  // Base cases: fibonacci(0) = 0, fibonacci(1) = 1
+
+    long long a = 0, b = 1, c;
+    
+    for (int i = 2; i <= n; i++) {
+        c = a + b;  // Calculate the next Fibonacci number
+        a = b;      // Move to the next term in the sequence
+        b = c;      // Update b to the new value
     }
+    return b;
+}
+
+
+
 
 
 
@@ -111,7 +198,58 @@ int main() {
 
 
     //! Ques3:  Calculate sum of digits of a number
-    cout << "sum = " << sumOfDigits(2356) << endl;
+    // cout << "sum = " << sumOfDigits(2356) << endl;
+
+    //! Ques4: C++ program to calculate nCr (binomial coefficient):
+    // int n, r;
+    // cout << "Enter n: ";
+    // cin >> n;
+    // cout << "Enter r: ";
+    // cin >> r;
+
+    // long long result = nCr(n, r);
+    // cout << "The value of " << n << "C" << r << " is " << result << endl;
+
+
+    //! Ques5: Write a function to check if a number is prime or not
+
+    // int n;
+    // cout << "Enter a number: ";
+    // cin >> n;
+
+    // if (isPrime(n))
+    //     cout << n << " is a prime number." << endl;
+    // else
+    //     cout << n << " is not a prime number." << endl;
+
+    // return 0;
+
+
+
+    //! Ques6: Write a function to print all prime numbers from 2 to N.
+
+    // int N;
+    // cout << "Enter N: ";
+    // cin >> N;
+
+    // cout << "Prime numbers from 2 to " << N << " are: ";
+    // printPrimes(N);
+
+    // return 0;
+
+
+    //! Ques7: Write a function to print nth Fibonacci Series.
+
+    int n;
+    cout << "Enter the value of n: ";
+    cin >> n;
+
+    cout << "The " << n << "th Fibonacci number is: " << fibonacci(n) << endl;
+
+    return 0;
+
+
+
    
 
 
