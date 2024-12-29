@@ -2,6 +2,34 @@
 #include <vector>
 using namespace std;
 
+ //! Homework:
+//! Ques1: Linear Search using Vectors:
+
+// int linearSearch(vector<int>vec, int sz, int target) {
+//         for (int i = 0; i < sz; i++)
+//         {
+//             if(vec[i] == target ) { //FOUND
+//                 return i;
+//             }
+//         }
+//         return -1;
+//     }
+
+//! Ques2: Reverse Vectors:
+
+    void reverseVector(vector<int>&vec, int sz) {
+    int start = 0,  end = sz - 1;
+
+    while (start < end) 
+    {
+        swap(vec[start], vec[end]);
+        start++;
+        end--;
+    }
+    
+}
+
+
 int main() {
     //vector<int> vec;    // by default size 0 as no element stored as of now.
     //cout<< vec[0];      // segmentation fault error as vector is empty currently.
@@ -91,17 +119,42 @@ int main() {
 
     //* How vectors are created in the memory:
 
-    vector<int> vec;
+    // vector<int> vec;
 
-    vec.push_back(0);
-    vec.push_back(1);
-    vec.push_back(2);
-    vec.push_back(3);       
-    vec.push_back(4);       // now size will be 5 and capacity will be 8   
+    // vec.push_back(0);
+    // vec.push_back(1);
+    // vec.push_back(2);
+    // vec.push_back(3);       
+    // vec.push_back(4);       // now size will be 5 and capacity will be 8   
 
-    cout << "Size = " << vec.size() << endl;         
-    cout << "Capacity = " << vec.capacity() << endl;   
+    // cout << "Size = " << vec.size() << endl;         
+    // cout << "Capacity = " << vec.capacity() << endl;   
 
+
+
+    //! Homework:
+    //! Ques1: Linear Search using Vectors:
+
+    // vector<int> vec = {4, 2, 7, 8, 1, 2, 5};
+    // int sz = vec.size();
+    // int target = 5;
+
+    // cout << "Element found at index: " << linearSearch(vec, sz, target) << endl;
+
+
+    //! Ques2: Reverse Vectors
+
+    vector<int>vec = {4, 2, 7, 8, 1, 2, 5};
+    int sz = vec.size();
+
+    reverseVector(vec, sz);
+
+    // printing array after reverse
+    for (int i = 0; i < sz; i++)
+    {
+        cout << vec[i] << " ";
+    }
+    cout << endl;
 
     
     return 0;
