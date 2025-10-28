@@ -3,8 +3,8 @@ using namespace std;
 
 int main(){
     int age;
-    char grade = 'A';   // ascii of 'A' => 65
-    float PI = 3.14f;  // 'f' for defining that its a float not double
+    char grade = 'A';       // ascii of 'A' => 65
+    float PI = 3.14f;       // 'f' for defining that its a float not double
     bool isSafe = true;     // will store true = 1, false = 0 in background!
     double price  = 100.99;
 
@@ -52,11 +52,11 @@ int main(){
 
     //* Logical
 
-    // NOT
+    //! NOT
     cout<< !(3 > 1) << endl;    // false -> 0
 
 
-    // OR
+    //! OR
     cout<<( (3 > 1) || (3 < 1) ) << endl;    // true -> 1
 
 
@@ -68,25 +68,25 @@ int main(){
     //* Unary Operator
 
     //? i++ (Post Increment Operator)
-    //int z = a++;    // first kaam; then update
+    //int z = a++;                            // first kaam; then update
     //cout << "z = " << z << endl; // 10      // this will get (a's) previous value
     //cout << "a = " << a << endl; // 11      // then update the value
 
 
     //? ++i (Pre Increment Operator)
-    //int z = ++a;    // first update; then kaam
+    //int z = ++a;                            // first update; then kaam
     //cout << "z = " << z << endl; // 11      // this will get (a's) updated value
     //cout << "a = " << a << endl; // 11      // here also updated value
 
 
     //? --i (Post Deccrement Operator)
-    //int z = a--;    // first kaam; then update
-    //cout << "z = " << z << endl; // 10      // this will get (a's) previous value which is = 10
+    //int z = a--;                           // first kaam; then update
+    //cout << "z = " << z << endl; // 10     // this will get (a's) previous value which is = 10
     //cout << "a = " << a << endl; // 9      // then we get (a's) updated value which is now = 9
 
 
-    //? --i (Pre Deccrement Operator)
-    int z = --a;    // first update; then kaam
+    //? --i (Pre Decrement Operator)
+    int z = --a;                           // first update; then kaam
     cout << "z = " << z << endl; // 9      // this will get (a's) updated value
     cout << "a = " << a << endl; // 9      // here also updated value
 
